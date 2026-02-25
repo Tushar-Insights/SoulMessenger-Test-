@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1008655856091",
+    "project_id": "soulmessenger-b3208",
+    "storage_bucket": "soulmessenger-b3208.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008655856091:android:2594189aff24c13e1cb7fe",
+        "android_client_info": {
+          "package_name": "com.fromtushar.soulmessenger"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXt8_JqT6NAR4qVLyJ_xMLNCedPeI6Chk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
