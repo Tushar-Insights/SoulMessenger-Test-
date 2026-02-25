@@ -47,7 +47,7 @@ public class splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                //  Yahan check karega ki user pehle se login hai ya nahi
+                //   user pehle se login hai ya nahi
                 if (auth.getCurrentUser() != null) {
                     // User login hai -> MainActivity par bhejo
                     Intent intent = new Intent(splash.this, MainActivity.class);
@@ -57,7 +57,7 @@ public class splash extends AppCompatActivity {
                     Intent intent = new Intent(splash.this, login.class);
                     startActivity(intent);
                 }
-                finish(); // Splash screen ko khatam kar do
+                finish(); // Splash screen off
             }
         }, 3000);
 

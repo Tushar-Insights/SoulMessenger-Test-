@@ -21,10 +21,10 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
         this.usersArrayList = usersArrayList;
     }
 
-    // 🔹 YE METHOD SEARCH KE LIYE SABSE ZARURI HAI
+ // method fore search
     public void filterList(ArrayList<Users> filteredList) {
-        this.usersArrayList = filteredList; // List ko naye data se badla
-        notifyDataSetChanged(); // RecyclerView ko refresh kiya
+        this.usersArrayList = filteredList;
+        notifyDataSetChanged();
     }
 
     @NonNull

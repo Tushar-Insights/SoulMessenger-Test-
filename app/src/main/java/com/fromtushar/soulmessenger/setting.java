@@ -52,11 +52,11 @@ public class setting extends AppCompatActivity {
 
         if (auth.getUid() == null) return;
 
-        // 🔥 Dhyaan dein: Yahan "User" hona chahiye kyunki aapne Firebase mein isi naam se save kiya hai
+        //Firebase mein isi naam se save kiya hai
         DatabaseReference reference = database.getReference().child("User").child(auth.getUid());
         StorageReference storageReference = storage.getReference().child("upload").child(auth.getUid());
 
-        // 1. Current User Data Fetch Karein (Jo login hai uska name/status dikhayega)
+        //  Current User Data
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -81,7 +81,7 @@ public class setting extends AppCompatActivity {
             }
         });
 
-        // 2. Profile Image Change karne ke liye
+        // Profile Image Change karne ke liye
         setprofile.setOnClickListener(view -> {
             Intent intent = new Intent();
             intent.setType("image/*");
@@ -89,7 +89,7 @@ public class setting extends AppCompatActivity {
             startActivityForResult(Intent.createChooser(intent, "Select Picture"), 10);
         });
 
-        // 3. Update Button Logic (Click karne par name/status update ho jayega)
+        // Update Button Logic
         donebut.setOnClickListener(view -> {
             String name = setname.getText().toString();
             String status = setstatus.getText().toString();

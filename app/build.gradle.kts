@@ -33,7 +33,7 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    // 🔧 Temporary safety (optional but useful)
+
     packagingOptions {
         jniLibs {
             useLegacyPackaging = true
@@ -66,11 +66,11 @@ dependencies {
     implementation("com.squareup.picasso:picasso:2.8")
     implementation("com.intuit.sdp:sdp-android:1.1.1")
 
-    // ✅ UPDATED Cloudinary (Fix for 16 KB issue)
+
     implementation("com.cloudinary:cloudinary-android:3.0.2")
     implementation("com.cloudinary:cloudinary-core:1.36.0")
 
-    // 🧠 Force latest Fresco (16 KB aligned libs)
+
     configurations.all {
         resolutionStrategy {
             force("com.facebook.fresco:fresco:3.3.0")

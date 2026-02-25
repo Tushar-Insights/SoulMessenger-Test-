@@ -65,7 +65,7 @@ public class messagesAdpter extends RecyclerView.Adapter {
 
     @Override
     public int getItemViewType(int position) {
-        // 🔥 ViewType logic add kiya hai taaki pata chale kaun sender hai kaun receiver
+
         if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals(messagesAdpterArrayList.get(position).getSenderid())) {
             return ITEM_SEND;
         } else {
@@ -73,14 +73,14 @@ public class messagesAdpter extends RecyclerView.Adapter {
         }
     }
 
-    // --- VIEW HOLDERS ---
+
     class SenderViewHolder extends RecyclerView.ViewHolder {
         CircleImageView circleImageView;
         TextView msgtxt;
 
         public SenderViewHolder(@NonNull View itemView) {
             super(itemView);
-            // Layout (sender_layout.xml) ki sahi IDs yahan likhein
+
             circleImageView = itemView.findViewById(R.id.profilerggg);
             msgtxt = itemView.findViewById(R.id.msgsendertyp);
         }
@@ -92,7 +92,7 @@ public class messagesAdpter extends RecyclerView.Adapter {
 
         public ReceiverViewHolder(@NonNull View itemView) {
             super(itemView);
-            // 🔥 Correction: circleImageView ko image ki ID dein aur msgtxt ko text ki ID
+
             circleImageView = itemView.findViewById(R.id.pro); // Receiver layout ki Image ID
             msgtxt = itemView.findViewById(R.id.recivertextset);       // Receiver layout ki Message Text ID
         }

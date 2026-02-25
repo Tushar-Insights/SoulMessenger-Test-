@@ -38,7 +38,7 @@ public class chatWin extends AppCompatActivity {
     FirebaseAuth firebase;
     FirebaseDatabase database;
 
-    // 🔥 Inhe static rakhne ki zaroorat nahi, hum seedhe adapter ko denge
+
     String sImage;
     String rImage;
 
@@ -76,7 +76,7 @@ public class chatWin extends AppCompatActivity {
         senderRoom = SenderUID + reciverUid;
         reciverRoom = reciverUid + SenderUID;
 
-        // Header set karein
+        // Header set
         reciverNName.setText(reciverName);
         Picasso.get().load(reciverimg).placeholder(R.drawable.avtar_dp).into(profile);
 
@@ -85,7 +85,7 @@ public class chatWin extends AppCompatActivity {
         layoutManager.setStackFromEnd(true);
         mmessangesAdpter.setLayoutManager(layoutManager);
 
-        // 🔥 STEP 1: Pehle apni (Sender) image fetch karein Firebase se
+
         DatabaseReference userRef = database.getReference().child("User").child(SenderUID);
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -93,7 +93,7 @@ public class chatWin extends AppCompatActivity {
                 if (snapshot.exists()) {
                     sImage = snapshot.child("profilepic").getValue().toString();
 
-                    // 🔥 STEP 2: Jab sender image mil jaye, tabhi adapter set karein
+
                     messagesAdpter = new messagesAdpter(chatWin.this, messagessArraylist, sImage, rImage);
                     mmessangesAdpter.setAdapter(messagesAdpter);
                 }
